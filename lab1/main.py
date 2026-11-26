@@ -10,7 +10,10 @@ def input_check() -> str:
     if not file_path.exists():
         sys.stderr.write(f"Ошибка: файл {file_path} не найден")
         sys.exit(1)
+<<<<<<< Updated upstream
     return file_path
+=======
+>>>>>>> Stashed changes
 
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
