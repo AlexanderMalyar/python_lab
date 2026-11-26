@@ -15,3 +15,7 @@ def input_check() -> str:
 def main():
     sys.stdout.reconfigure(encoding='utf-8')
     file_path = input_check()
+    stats = {}
+    with open(file_path, 'r', encoding = 'utf-8') as _file:
+        for line in _file:
+            station, temper_str = line.strip().split(';')
