@@ -30,3 +30,11 @@ def main():
                 ]
             else:
                 stats[station] = [temper, temper, temper, 1]
+    for station in sorted(stats.keys()):
+            mintemp, maxtemp, total, count = stats[station]
+            mean = total / count
+            rounded_mean = math.floor(10 * mean + 0.5) / 10
+            print(f"{station};{mintemp:.1f};{rounded_mean:.1f};{maxtemp:.1f}")
+
+if __name__ == '__main__':
+    main()
