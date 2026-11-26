@@ -19,3 +19,14 @@ def main():
     with open(file_path, 'r', encoding = 'utf-8') as _file:
         for line in _file:
             station, temper_str = line.strip().split(';')
+            temper = float(temper_str)
+            if station in stats:
+                mintemp, maxtemp, total, count = stats[station]
+                stats[station] = [
+                    min(mintemp, temper),
+                    max(maxtemp, temper),
+                    total + temper,
+                    count + 1
+                ]
+            else:
+                stats[station] = [temper, temper, temper, 1]
