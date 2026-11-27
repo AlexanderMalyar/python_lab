@@ -1,0 +1,7 @@
+__pycache__/
+.venv/
+venv/
+.idea/
+.vscode/
+measurements_1k.txt
+measurements_100k.txt
